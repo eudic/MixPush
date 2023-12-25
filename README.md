@@ -96,7 +96,7 @@ android {
     }
 }
 dependencies {
-    def mixpush_version = '2.3.9'
+    def mixpush_version = '2.4.0'
     implementation "io.github.mixpush:mixpush-core:$mixpush_version" // 核心包
     implementation "io.github.mixpush:mixpush-mi:$mixpush_version" // 小米推送
     implementation "io.github.mixpush:mixpush-meizu:$mixpush_version"  // 魅族推送
@@ -374,3 +374,5 @@ mi代表使用小米推送，huawei代表是使用华为推送。ok代表通过�
 - 通知栏重要等级设置
 - APNS 官方通道（iOS建议使用小米推送）
 
+### 打包
+https://jitpack.io

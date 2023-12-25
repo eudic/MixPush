@@ -1,10 +1,13 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'com.hihonor.mcs.asplugin'
+}
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 17
 
     }
 
@@ -16,11 +19,18 @@ android {
     }
 
 }
+allprojects {
+    repositories {
+        maven { url 'https://developer.hihonor.com/repo' }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':mixpush-core')
-    implementation 'com.meizu.flyme.internet:push-internal:4.1.4'
+    }
 }
 
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':mixpush-core')
+    implementation 'com.hihonor.mcs:push:7.0.61.303'
+
+}
 apply from: '../maven_public.gradle'
